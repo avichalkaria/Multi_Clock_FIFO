@@ -1,0 +1,32 @@
+Warning: Design 'FIFO_expwidth' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIFO_expwidth
+Version: Y-2006.06-SP4
+Date   : Sat Oct  4 01:24:21 2014
+****************************************
+
+Operating Conditions: typical   Library: osu018_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: F2/p8 (internal pin)
+  Endpoint: empty (output port clocked by clk)
+  Path Group: (none)
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  F2/p8 (FIFO)                             0.00       0.00 f
+  U2/Y (OR2X2)                             0.08       0.08 f
+  empty (out)                              0.00       0.08 f
+  data arrival time                                   0.08
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

@@ -1,0 +1,54 @@
+Warning: Design 'FIFO_explength' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	U5/B U5/Y 
+Information: Timing loop detected. (OPT-150)
+	U4/A U4/Y 
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIFO_explength
+Version: Y-2006.06-SP4
+Date   : Sat Oct  4 01:15:34 2014
+****************************************
+
+Operating Conditions: typical   Library: osu018_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: put (input port clocked by clk)
+  Endpoint: put_a_reg (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.50       0.50 r
+  put (in)                                 0.00       0.50 r
+  U94/Y (OAI21X1)                          0.05       0.55 f
+  U93/Y (INVX2)                            0.08       0.63 r
+  U92/Y (NOR2X1)                           0.24       0.87 f
+  U91/Y (INVX2)                            0.21       1.08 r
+  U90/Y (NOR2X1)                           0.16       1.24 f
+  U51/Y (NAND2X1)                          0.08       1.32 r
+  U50/Y (OAI21X1)                          0.04       1.37 f
+  put_a_reg/D (DFFPOSX1)                   0.00       1.37 f
+  data arrival time                                   1.37
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  put_a_reg/CLK (DFFPOSX1)                 0.00       2.00 r
+  library setup time                      -0.16       1.84
+  data required time                                  1.84
+  -----------------------------------------------------------
+  data required time                                  1.84
+  data arrival time                                  -1.37
+  -----------------------------------------------------------
+  slack (MET)                                         0.47
+
+
+1

@@ -1,0 +1,35 @@
+ncsim(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+The SystemC(r) Code included in this Product is Copyright  1996 - 2006 by all Contributors.  All rights reserved.
+
+The SystemC Code included in this Product has been modified by Cadence Design Systems, Inc. and CoWare, Inc. All such modifications are Copyright (c) 2004-2010 Cadence Design Systems, Inc. and Copyright (c) 2004 CoWare, Inc.  All Rights Reserved.
+
+SystemC(r) is a registered trademark of Open SystemC Initiative, Inc. in the United States and other countries and is used with permission.
+
+ncsim> run
+Packet written 250 ns
+00000001
+fill count 250 ns
+00000001
+Packet written 270 ns
+00000010
+fill count 270 ns
+00000010
+Packet written 290 ns
+00000011
+fill count 290 ns
+00000011
+Packet written 310 ns
+00000100
+fill count 310 ns
+00000100
+Packet written 330 ns
+00000101
+fill count 330 ns
+00000101
+
+
+SC simulation stopped by user.
+
+SystemC : SystemC stopped at time 340
+ncsim> exit

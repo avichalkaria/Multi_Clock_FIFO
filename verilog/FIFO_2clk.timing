@@ -1,0 +1,99 @@
+Information: Updating design information... (UID-85)
+Warning: Clock port 'rclk' cannot be assigned input delay relative to clock 'wclk'.  Ignoring the value. (TIM-111)
+Warning: Clock port 'rclk' cannot be assigned input delay relative to clock 'wclk'.  Ignoring the value. (TIM-111)
+Warning: Clock port 'wclk' cannot be assigned input delay relative to clock 'rclk'.  Ignoring the value. (TIM-111)
+Warning: Clock port 'wclk' cannot be assigned input delay relative to clock 'rclk'.  Ignoring the value. (TIM-111)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DFIFO
+Version: Y-2006.06-SP4
+Date   : Sat Oct  4 02:23:45 2014
+****************************************
+
+Operating Conditions: typical   Library: osu018_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: double_clock_fifo_reg[5][0]
+              (rising edge-triggered flip-flop clocked by wclk)
+  Endpoint: data_out_reg[0]
+            (rising edge-triggered flip-flop clocked by rclk)
+  Path Group: rclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk (rise edge)                                 45.00      45.00
+  clock network delay (ideal)                             0.00      45.00
+  double_clock_fifo_reg[5][0]/CLK (DFFPOSX1)              0.00      45.00 r
+  double_clock_fifo_reg[5][0]/Q (DFFPOSX1)                0.19      45.19 f
+  U312/Y (MUX2X1)                                         0.10      45.28 r
+  U295/Y (MUX2X1)                                         0.08      45.36 f
+  U315/Y (MUX2X1)                                         0.10      45.46 r
+  U316/Y (INVX2)                                          0.04      45.50 f
+  U96/Y (AOI22X1)                                         0.09      45.60 r
+  U95/Y (INVX2)                                           0.03      45.63 f
+  data_out_reg[0]/D (DFFPOSX1)                            0.00      45.63 f
+  data arrival time                                                 45.63
+
+  clock rclk (rise edge)                                 50.00      50.00
+  clock network delay (ideal)                             0.00      50.00
+  data_out_reg[0]/CLK (DFFPOSX1)                          0.00      50.00 r
+  library setup time                                     -0.16      49.84
+  data required time                                                49.84
+  --------------------------------------------------------------------------
+  data required time                                                49.84
+  data arrival time                                                -45.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.21
+
+
+  Startpoint: rd_ptr_gray_ss_reg[3]
+              (rising edge-triggered flip-flop clocked by wclk)
+  Endpoint: double_clock_fifo_reg[6][6]
+            (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: wclk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wclk (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  rd_ptr_gray_ss_reg[3]/CLK (DFFPOSX1)                    0.00       0.00 r
+  rd_ptr_gray_ss_reg[3]/Q (DFFPOSX1)                      0.22       0.22 f
+  U12/Y (XOR2X1)                                          0.27       0.48 r
+  U10/Y (XOR2X1)                                          0.16       0.64 f
+  U385/Y (NAND2X1)                                        0.19       0.83 r
+  U389/Y (OAI21X1)                                        0.07       0.90 f
+  U365/Y (INVX2)                                          0.05       0.95 r
+  U390/Y (AOI21X1)                                        0.13       1.08 f
+  U393/Y (AOI21X1)                                        0.10       1.18 r
+  U367/Y (INVX2)                                          0.04       1.22 f
+  U394/Y (OAI21X1)                                        0.09       1.31 r
+  U396/Y (XOR2X1)                                         0.11       1.42 r
+  U282/Y (NAND3X1)                                        0.07       1.49 f
+  U261/Y (NAND2X1)                                        0.09       1.58 r
+  U260/Y (NOR2X1)                                         0.27       1.85 f
+  U259/Y (AND2X1)                                         0.25       2.10 f
+  U43/Y (NAND3X1)                                         0.52       2.62 r
+  U28/Y (NAND2X1)                                         0.06       2.67 f
+  U27/Y (OAI21X1)                                         0.07       2.74 r
+  double_clock_fifo_reg[6][6]/D (DFFPOSX1)                0.00       2.74 r
+  data arrival time                                                  2.74
+
+  clock wclk (rise edge)                                  5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  double_clock_fifo_reg[6][6]/CLK (DFFPOSX1)              0.00       5.00 r
+  library setup time                                     -0.17       4.83
+  data required time                                                 4.83
+  --------------------------------------------------------------------------
+  data required time                                                 4.83
+  data arrival time                                                 -2.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.08
+
+
+1

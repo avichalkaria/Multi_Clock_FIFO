@@ -1,0 +1,87 @@
+: (c) Copyright 1995-2008 Cadence Design Systems, Inc.
+
+ncsc_run \
+	-64BIT \
+	-noscv \
+	fifo.cpp \
+	fifo_test.cpp \
+	main.cpp \
+	sink.cpp \
+	top.cpp \
+	-top top
+
+$CDSROOT = /usr/local/cadence/IFV82
+$TESTDIR = /home/scf-31/avichalk/577b/lab4_part2/question2
+
+TOOL:	ncsc(64)	08.20-s029
+ncsc C++ parameters: 
+	ncsc -COMPILER $CDSROOT/tools/systemc/gcc/4.1-x86_64/bin/g++ 
+	-f INCA_libs/ncsc_obj/ncsc.args
+	-MANUAL 
+	-CFLAGS "-DNCSC
+		-I$CDSROOT/tools/systemc/include_pch
+		-I$CDSROOT/tools/tbsc/include
+		-I$CDSROOT/tools/vic/include
+		-I$CDSROOT/tools/ovm/sc/src
+		-I$CDSROOT/tools/systemc/include/tlm
+		-fPIC
+		-c
+		-x c++  -Wall"
+
+make: `INCA_libs/ncsc_obj/fifo.o' is up to date.
+
+make: `INCA_libs/ncsc_obj/fifo_test.o' is up to date.
+
+make: `INCA_libs/ncsc_obj/main.o' is up to date.
+
+ncsc: compiling $TESTDIR/sink.cpp
+
+make: `INCA_libs/ncsc_obj/top.o' is up to date.
+
+building library ncsc_model.so
+
+---
+
+ncelab -f INCA_libs/ncsc_obj/simplus.args -f INCA_libs/ncsc_obj/ncelab.args -loadsc libncsc_model -snapshot top top
+
+ncelab(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+---
+
+ncsim -f INCA_libs/ncsc_obj/simplus.args -f INCA_libs/ncsc_obj/ncsim.args -loadcfc :cfcbootstrap top
+
+ncsim(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+
+The SystemC(r) Code included in this Product is Copyright  1996 - 2006 by all Contributors.  All rights reserved.
+
+The SystemC Code included in this Product has been modified by Cadence Design Systems, Inc. and CoWare, Inc. All such modifications are Copyright (c) 2004-2010 Cadence Design Systems, Inc. and Copyright (c) 2004 CoWare, Inc.  All Rights Reserved.
+
+SystemC(r) is a registered trademark of Open SystemC Initiative, Inc. in the United States and other countries and is used with permission.
+
+ncsim> run
+Packet written 250 ns
+00000001
+fill count 250 ns
+00000001
+Packet written 270 ns
+00000010
+fill count 270 ns
+00000010
+Packet written 290 ns
+00000011
+fill count 290 ns
+00000011
+Packet written 310 ns
+00000100
+fill count 310 ns
+00000100
+Packet written 330 ns
+00000101
+fill count 330 ns
+00000101
+
+
+SC simulation stopped by user.
+
+SystemC : SystemC stopped at time 340
+ncsim> exit

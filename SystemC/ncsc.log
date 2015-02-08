@@ -1,0 +1,3 @@
+ncsc(64): 08.20-s029: (c) Copyright 1995-2011 Cadence Design Systems, Inc.
+ncsc: /usr/local/cadence/IFV82/tools/systemc/gcc/4.1-x86_64/bin/g++ -DNCSC -DCADENCE  -DLNX86 -I/usr/local/cadence/IFV82/tools/systemc/include_pch/64bit -o INCA_libs/ncsc_obj/sink.o  -DNCSC -I/usr/local/cadence/IFV82/tools/systemc/include_pch -I/usr/local/cadence/IFV82/tools/tbsc/include -I/usr/local/cadence/IFV82/tools/vic/include -I/usr/local/cadence/IFV82/tools/ovm/sc/src -I/usr/local/cadence/IFV82/tools/systemc/include/tlm -fPIC -c -x c++  -Wall  /home/scf-31/avichalk/577b/lab4_part2/question2/sink.cpp
+ncsc: Running scFrontEnd on /home/scf-31/avichalk/577b/lab4_part2/question2/sink.cpp using library worklib...
